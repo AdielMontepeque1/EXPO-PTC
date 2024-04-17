@@ -1,0 +1,32 @@
+.logo {
+    font-size: 48px;
+    /* Tamaño del icono */
+    color: white;
+    /* Color del icono */
+    text-decoration: none;
+    /* Eliminar subrayado del enlace */
+    margin-bottom: 20px;
+    /* Separación hacia abajo */
+}
+
+.Usuario {
+    font-size: 48px;
+    /* Tamaño del icono */
+    text-decoration: none;
+    /* Eliminar subrayado del enlace */
+    margin-top: auto;
+    /* Empujar al final del contenedor */
+}
+
+.Usuario i {
+    color: white;
+    /* Color del icono */
+}
+
+.marge{
+    margin-top: 14rem;
+}
+
+.celeste {
+    background-color: rgba(25, 118, 210, 1);
+}
