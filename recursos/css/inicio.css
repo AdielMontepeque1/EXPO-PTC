@@ -30,3 +30,39 @@
 .celeste {
     background-color: rgba(25, 118, 210, 1);
 }
+
+.contenedor-uno{
+    max-height: 1000px;
+    min-height: 858px;
+    max-width: 600px;
+    min-width: 448px;
+    border-radius: 25px;
+}
+
+.contenedor-dos{
+    max-height: 600px;
+    min-height: 543px;
+    max-width: 700px;
+    min-width: 636px;
+    border-radius: 25px;
+}
+
+.contenedor-tres{
+    max-height: 200px;
+    min-height: 183px;
+    max-width: 700px;
+    min-width: 636px;
+    border-radius: 25px;
+}
+
+.fondo{
+    background-color: #9BD2FF;
+}
+
+.color-principal{
+   background-color:  #E3F2FD;
+}
+
+.espacio{
+    margin-top: 25rem;
+}
