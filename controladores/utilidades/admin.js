@@ -7,8 +7,6 @@
 const USER_API = 'services/admin/administrador.php';
 // Constante para establecer el elemento del contenido principal.
 const MAIN = document.querySelector('main');
-MAIN.style.paddingTop = '50px';
-MAIN.style.paddingBottom = '100px';
 MAIN.classList.add('container');
 
 /* Función asíncrona para cargar el encabezado y pie del documento.
