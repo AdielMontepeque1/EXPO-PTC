@@ -1,0 +1,29 @@
+.celeste {
+    background-color: #00aae4;
+}
+
+.bg-custom {
+    background-color: #90CAF9;
+}
+
+.btn-custom {
+    background-color: #90CAF9;
+    color: #fff;
+}
+
+.text-custom {
+    color: #fff;
+}
+
+body{
+    background-color: #E3F2FD;
+}
+
+.search-bar{
+    background-color: #1E88E5;
+    width: 70%;
+}
+
+.btn-agregar{
+    background-color: #90CAF9;
+}
