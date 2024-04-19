@@ -22,11 +22,11 @@
     color: white;
     /* Color del icono */
 }
-
+/*
 .marge{
     margin-top: 14rem;
 }
-
+*/
 .celeste {
     background-color: rgba(25, 118, 210, 1);
 }
@@ -117,3 +117,7 @@
 .botones:hover{
     color:#000;
 }
+
+.offcanvas, .offcanvas-lg, .offcanvas-md, .offcanvas-sm, .offcanvas-xl, .offcanvas-xxl {   
+    --bs-offcanvas-width: 300px;
+   }
