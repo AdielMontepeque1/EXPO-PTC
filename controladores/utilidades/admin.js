@@ -20,7 +20,7 @@ const loadTemplate = async () => {
     MAIN.insertAdjacentHTML('beforebegin', `<header>
     <nav class="navbar">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        <button class="navbar-toggler navbar-poz" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -100,6 +100,14 @@ const loadTemplate = async () => {
             </div>
         </div>
     </nav>
+
+
+
+
+
+
+
+    
 </header>
 `);
 

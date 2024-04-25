@@ -120,4 +120,11 @@
 
 .offcanvas, .offcanvas-lg, .offcanvas-md, .offcanvas-sm, .offcanvas-xl, .offcanvas-xxl {   
     --bs-offcanvas-width: 300px;
-   }
+}
+
+.navbar-poz {
+    position: fixed;
+    top: 10px; /* Ajusta este valor según tu diseño */
+    left: 10%; /* Ajusta este valor según tu diseño */
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+}
