@@ -55,7 +55,7 @@ const loadTemplate = async () => {
                         </li>
                         <!-- Etiqueta para el usuario -->
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="usuarios.html" role="button">
+                            <a class="nav-link text-light" href="usuario.html" role="button">
                                 <img src="../../../resources/img/svg/icons_menu/users.svg" class="me-3" alt="">
                                 <i class='bx bx-user'></i> Usuarios
                             </a>
