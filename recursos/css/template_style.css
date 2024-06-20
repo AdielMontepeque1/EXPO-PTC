@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
+/* Mover importación de fuentes al HTML */
 ::after,
 ::before {
     box-sizing: border-box;
@@ -169,8 +168,10 @@ a.sidebar-link:hover {
     color: #FFF;
     font-size: 0.9rem;
     padding: 0.35rem 1.2rem;  
- 
-    @media (max-width: 576px) {
+}
+
+@media (max-width: 576px) {
+    .sidebar-footer .form-select {
         padding: 0.25rem 2.5rem;  
     }
 }
