@@ -30,7 +30,7 @@ const openCreate = () => {
     MODAL_TITLE.textContent = 'Crear Usuario';
     // Se prepara el formulario.
     SAVE_FORM.reset();
-    fillSelected(lista_datos_categorias, 'readAll', 'categoria');
+    //fillSelected(lista_datos_categorias, 'readAll', 'categoria');
 }
 
 /*
@@ -68,32 +68,32 @@ const openInfo = () => {
 // Método del evento para cuando el documento ha cargado.
 document.addEventListener('DOMContentLoaded', () => {
     // Llamada a la función para mostrar el encabezado y pie del documento.
-    loadTemplate();
+ //   loadTemplate();
     fillCards();
 });
 
 
 const lista_datos = [
     {
-        imagen: 'https://icones.pro/wp-content/uploads/2021/02/icone-utilisateur.png',
+        imagen: 'https://www.arideocean.com/wp-content/themes/arkahost/assets/images/default.png',
         Dui: '12345678-9',
         Nombre: 'Juan Torres',
         cargo: 'Empleado',
         Email: 'Juan@gmail.com'
     }, {
-        imagen: 'https://icones.pro/wp-content/uploads/2021/02/icone-utilisateur.png',
+        imagen: 'https://www.arideocean.com/wp-content/themes/arkahost/assets/images/default.png',
         Dui: '12345678-9',
         Nombre: 'Juan Torres',
         cargo: 'Empleado',
         Email: 'Juan@gmail.com'
     }, {
-        imagen: 'https://icones.pro/wp-content/uploads/2021/02/icone-utilisateur.png',
+        imagen: 'https://www.arideocean.com/wp-content/themes/arkahost/assets/images/default.png',
         Dui: '12345678-9',
         Nombre: 'Juan Torres',
         cargo: 'Empleado',
         Email: 'Juan@gmail.com'
     }, {
-        imagen: 'https://icones.pro/wp-content/uploads/2021/02/icone-utilisateur.png',
+        imagen: 'https://www.arideocean.com/wp-content/themes/arkahost/assets/images/default.png',
         Dui: '12345678-9',
         Nombre: 'Juan Torres',
         cargo: 'Empleado',
