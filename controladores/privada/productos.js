@@ -67,7 +67,6 @@ const openInfo = () => {
 // Método del evento para cuando el documento ha cargado.
 document.addEventListener('DOMContentLoaded', () => {
     // Llamada a la función para mostrar el encabezado y pie del documento.
-    loadTemplate();
     fillCards();
 });
 
@@ -190,7 +189,7 @@ async function fillCards(form = null) {
                     <h3>${row.producto}</h3>
                     <p>Tipo: <span>${row.tipo}</span></p>
                     <p>Precio: <span>${row.precio}</span></p>
-                    <button class="btn botones azul rounded-5" onclick="openInfo()">Ver mas...</button>
+                    <button class="btn botones-azul rounded-5" onclick="openInfo()">Ver mas...</button>
                 </div>
             </div>
         </div>

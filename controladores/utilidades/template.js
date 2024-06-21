@@ -1,9 +1,13 @@
-// Función para agregar referencia CSS con cache busting
+// Función para agregar referencia CSS usando cache busting y retorno de promesa
 function cssReference(href) {
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = `${href}?v=1.0.0`; 
-    document.head.appendChild(link);
+    return new Promise((resolve, reject) => {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = `${href}?v=1.0.0`;
+        link.onload = resolve; // Resuelve la promesa q hace la pagina cuando el css se carga
+        link.onerror = reject; 
+        document.head.appendChild(link);
+    });
 }
 
 // Función para generar el HTML del sidebar
@@ -15,24 +19,24 @@ function sideBar() {
                     <img src="../recursos/img/vector.png" alt="Logo" width="24px" height="24px">
                 </button>
                 <div class="sidebar-logo">
-                    <a href="#">Pemi Parts</a>
+                    <a href="../../vistas/inicio.html">Pemi Parts</a>
                 </div>
             </div>
             <ul class="sidebar-nav">
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
+                    <a href="../../vistas/productos.html" class="sidebar-link">
                         <i class="bi bi-box-seam"></i>
                         <span>Productos</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
+                    <a href="../../vistas/usuario.html" class="sidebar-link">
                         <i class="bi bi-people"></i>
                         <span>Usuarios</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
+                    <a href="../../vistas/clientes.html" class="sidebar-link">
                         <i class="bi bi-person-lines-fill"></i>
                         <span>Clientes</span>
                     </a>
@@ -44,7 +48,7 @@ function sideBar() {
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
+                    <a href="../../vistas/cotizaciones.html" class="sidebar-link">
                         <i class="bi bi-file-text"></i>
                         <span>Cotizaciones</span>
                     </a>
@@ -65,22 +69,19 @@ function sideBar() {
 
 // Función para cargar la template
 function loadTemplate() {
-    const mainElement = document.querySelector('main'); 
+    const mainElement = document.querySelector('main');
 
     if (mainElement) {
-        mainElement.classList.add('wrapper', 'd-flex'); 
+        mainElement.classList.add('wrapper', 'd-flex');
 
-        // Crear el div #mainTitle dinámicamente
         const mainTitleDiv = document.createElement('div');
         mainTitleDiv.id = 'mainTitle';
         mainTitleDiv.classList.add('flex-shrink-0');
-        mainElement.insertBefore(mainTitleDiv, mainElement.firstChild); 
-
+        mainElement.insertBefore(mainTitleDiv, mainElement.firstChild);
 
         const sidebarHTML = sideBar();
         mainTitleDiv.innerHTML = sidebarHTML;
 
-        // Agregar evento al botón hamburguesa
         const hamBurger = mainTitleDiv.querySelector(".toggle-btn");
         hamBurger.addEventListener("click", function () {
             mainTitleDiv.querySelector("#sidebar").classList.toggle("expand");
@@ -91,8 +92,15 @@ function loadTemplate() {
             mainContentDiv.classList.add('main', 'p-3', 'text-center');
         }
     }
-
-    cssReference('../recursos/css/template_style.css'); 
 }
 
-document.addEventListener('DOMContentLoaded', loadTemplate);
+// Cargar referencias CSS y luego cargar la template
+document.addEventListener('DOMContentLoaded', () => {
+    Promise.all([
+        cssReference('../recursos/css/template_style.css'),
+        cssReference('../recursos/css/bootstrap-icons.min.css'),
+        cssReference('../recursos/css/lineicons.css')
+    ]).then(loadTemplate).catch((error) => {
+        console.error('Error loading CSS files:', error);
+    });
+});
