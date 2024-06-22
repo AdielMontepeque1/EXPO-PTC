@@ -42,7 +42,7 @@ function sideBar() {
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
+                    <a href="../../vistas/contenedores.html" class="sidebar-link">
                         <i class="bi bi-layout-text-window-reverse"></i>
                         <span>Contenedor</span>
                     </a>
