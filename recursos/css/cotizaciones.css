@@ -20,10 +20,22 @@ body{
 }
 
 .search-bar{
-    background-color: #1E88E5;
+    background-color: white;
     width: 70%;
 }
 
 .btn-agregar{
     background-color: #90CAF9;
 }
+
+.table-primary {
+    --bs-table-bg: #42A5F5;
+    color: #90CAF9;
+}
+
+.custom-rounded {
+    border-radius: 30px; /* Ajusta este valor para obtener esquinas más o menos redondeadas */
+    background-color: #90CAF9; /* Color de fondo especificado */
+    color: white; /* Texto blanco para mejor contraste */
+}
+ 
