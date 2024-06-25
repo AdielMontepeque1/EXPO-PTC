@@ -19,36 +19,36 @@ function sideBar() {
                     <img src="../recursos/img/vector.png" alt="Logo" width="24px" height="24px">
                 </button>
                 <div class="sidebar-logo">
-                    <a href="../../vistas/inicio.html">Pemi Parts</a>
+                    <a href="../vistas/dashboard.html">Pemi Parts</a>
                 </div>
             </div>
             <ul class="sidebar-nav">
                 <li class="sidebar-item">
-                    <a href="../../vistas/productos.html" class="sidebar-link">
+                    <a href="../vistas/productos.html" class="sidebar-link">
                         <i class="bi bi-box-seam"></i>
                         <span>Productos</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="../../vistas/usuario.html" class="sidebar-link">
+                    <a href="../vistas/usuario.html" class="sidebar-link">
                         <i class="bi bi-people"></i>
                         <span>Usuarios</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="../../vistas/clientes.html" class="sidebar-link">
+                    <a href="../vistas/clientes.html" class="sidebar-link">
                         <i class="bi bi-person-lines-fill"></i>
                         <span>Clientes</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="../../vistas/contenedores.html" class="sidebar-link">
+                    <a href="../vistas/contenedores.html" class="sidebar-link">
                         <i class="bi bi-layout-text-window-reverse"></i>
                         <span>Contenedor</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="../../vistas/cotizaciones.html" class="sidebar-link">
+                    <a href="../vistas/cotizaciones.html" class="sidebar-link">
                         <i class="bi bi-file-text"></i>
                         <span>Cotizaciones</span>
                     </a>
