@@ -1,9 +1,9 @@
 DROP DATABASE IF EXISTS PemiDB;
 CREATE DATABASE PemiDB;
 USE PemiDB;
-
+ 
 CREATE TABLE tb_usuarios(
-    id_usuario INT PRIMARY KEY,
+    id_usuario INT AUTO_INCREMENT PRIMARY KEY,
     imagen_usuario varchar(200),
     nombre VARCHAR(200) NOT NULL,
     apellido VARCHAR(200) NOT NULL,
@@ -13,6 +13,10 @@ CREATE TABLE tb_usuarios(
     contraseña VARCHAR(200) NOT NULL
 );
 
+
+INSERT INTO `tb_usuarios` ( id_usuario, `nombre`, `apellido`, `numero_telefono`, `cargo`, `correo_electronico`, `contraseña`) 
+VALUES (1,  'Kenneth', 'Ramos', '8989-9898', 0, 'kenneth@gmail.com', '$2y$10$d/xoGWtEj7DNaMdlRe9JuujUKTPWZHj67drnsuUMhLe8mXDgORecG');
+ 
 -- Falta pantalla de SCRUD
 CREATE TABLE tb_categorias(
     id_categoria INT PRIMARY KEY,

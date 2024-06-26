@@ -2,11 +2,11 @@
 // Se incluye la clase para validar los datos de entrada.
 require_once('../../helpers/validator.php');
 // Se incluye la clase padre.
-require_once('../../models/handler/administrador_handler.php');
+require_once('../../models/handler/usuario_handler.php');
 /*
  *  Clase para manejar el encapsulamiento de los datos de la tabla USUARIO.
  */
-class AdministradorData extends AdministradorHandler
+class UsuarioData extends UsuarioHandler
 {
     // Atributo genérico para manejo de errores.
     private $data_error = null;
@@ -20,7 +20,7 @@ class AdministradorData extends AdministradorHandler
             $this->id = $value;
             return true;
         } else {
-            $this->data_error = 'El identificador del administrador es incorrecto';
+            $this->data_error = 'El identificador del usuario es incorrecto';
             return false;
         }
     }
@@ -53,6 +53,17 @@ class AdministradorData extends AdministradorHandler
         }
     }
 
+    public function setCargo($value)
+    {
+        if ($value === '0' || $value === '1') {
+            $this->cargo = $value;
+            return true;
+        } else {
+            $this->data_error = 'El valor del cargo es incorrecto';
+            return false;
+        }
+    }
+
     public function setCorreo($value, $min = 8, $max = 100)
     {
         if (!Validator::validateEmail($value)) {
@@ -66,6 +77,18 @@ class AdministradorData extends AdministradorHandler
             return false;
         }
     }
+
+    public function setTelefono($value)
+    {
+        if (Validator::validatePhone($value)) {
+            $this->telefono = $value;
+            return true;
+        } else {
+            $this->data_error = 'El teléfono debe tener el formato (2, 6, 7)###-####';
+            return false;
+        }
+    }
+
 
     public function setAlias($value, $min = 6, $max = 25)
     {
